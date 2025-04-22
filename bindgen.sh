@@ -7,6 +7,7 @@ bindgen --rust-target 1.73 \
         --generate types,vars \
         --blocklist-type wchar_t \
         --blocklist-type max_align_t \
+        --no-debug OfxStatus \
         --allowlist-var 'kOfx.*' \
         --allowlist-type '.*' \
         --no-doc-comments \

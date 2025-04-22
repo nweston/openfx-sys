@@ -739,7 +739,7 @@ pub struct OfxPropertySetStruct {
 #[derive(Debug, Copy, Clone, PartialEq, Eq)]
 pub struct OfxPropertySetHandle(pub *mut OfxPropertySetStruct);
 #[repr(transparent)]
-#[derive(Debug, Copy, Clone, PartialEq, Eq)]
+#[derive(Copy, Clone, PartialEq, Eq)]
 pub struct OfxStatus(pub ::std::os::raw::c_int);
 #[repr(C)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq)]
