@@ -1,8 +1,7 @@
-// All generated bindings
-mod openfx_all;
-
-pub use openfx_all::*;
+#![allow(non_snake_case, non_upper_case_globals)]
 use std::ffi::c_void;
+
+include!("openfx_all.rs");
 
 type ParamGetValueFn = unsafe extern "C" fn(paramHandle: OfxParamHandle, ...) -> OfxStatus;
 

@@ -7,6 +7,8 @@
 // Rather than fiddling with allow/deny lists, include everything we need
 // here and let the C preprocessor sort things out.
 
+#include <stdbool.h>
+
 #include <ofxImageEffect.h>
 #include <ofxGPURender.h>
 #include <ofxProgress.h>
