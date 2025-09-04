@@ -1,6 +1,9 @@
 #![allow(non_snake_case, non_upper_case_globals)]
 use std::ffi::c_void;
 
+#[cfg(feature = "derive_serde")]
+use serde::{Deserialize, Serialize};
+
 include!("openfx_all.rs");
 
 pub mod ofxstatus {

@@ -849,9 +849,11 @@ fn bindgen_test_layout_OfxPlugin() {
 }
 #[repr(transparent)]
 #[derive(Debug, Copy, Clone, PartialEq)]
+#[cfg_attr(feature = "derive_serde", derive(Deserialize, Serialize))]
 pub struct OfxTime(pub f64);
 #[repr(C)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq)]
+#[cfg_attr(feature = "derive_serde", derive(Deserialize, Serialize))]
 pub struct OfxRangeI {
     pub min: ::std::os::raw::c_int,
     pub max: ::std::os::raw::c_int,
@@ -883,6 +885,7 @@ fn bindgen_test_layout_OfxRangeI() {
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone, PartialEq)]
+#[cfg_attr(feature = "derive_serde", derive(Deserialize, Serialize))]
 pub struct OfxRangeD {
     pub min: f64,
     pub max: f64,
@@ -914,6 +917,7 @@ fn bindgen_test_layout_OfxRangeD() {
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq)]
+#[cfg_attr(feature = "derive_serde", derive(Deserialize, Serialize))]
 pub struct OfxPointI {
     pub x: ::std::os::raw::c_int,
     pub y: ::std::os::raw::c_int,
@@ -945,6 +949,7 @@ fn bindgen_test_layout_OfxPointI() {
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone, PartialEq)]
+#[cfg_attr(feature = "derive_serde", derive(Deserialize, Serialize))]
 pub struct OfxPointD {
     pub x: f64,
     pub y: f64,
@@ -976,6 +981,7 @@ fn bindgen_test_layout_OfxPointD() {
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq)]
+#[cfg_attr(feature = "derive_serde", derive(Deserialize, Serialize))]
 pub struct OfxRectI {
     pub x1: ::std::os::raw::c_int,
     pub y1: ::std::os::raw::c_int,
@@ -1019,6 +1025,7 @@ fn bindgen_test_layout_OfxRectI() {
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone, PartialEq)]
+#[cfg_attr(feature = "derive_serde", derive(Deserialize, Serialize))]
 pub struct OfxRectD {
     pub x1: f64,
     pub y1: f64,
