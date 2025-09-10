@@ -6,6 +6,113 @@ use serde::{Deserialize, Serialize};
 
 include!("openfx_all.rs");
 
+impl Into<*mut c_void> for OfxDrawContextHandle {
+    fn into(self) -> *mut c_void {
+        self.0 as _
+    }
+}
+
+impl From<*mut c_void> for OfxDrawContextHandle {
+    fn from(ptr: *mut c_void) -> Self {
+        Self(ptr as _)
+    }
+}
+
+impl Into<*mut c_void> for OfxImageClipHandle {
+    fn into(self) -> *mut c_void {
+        self.0 as _
+    }
+}
+
+impl From<*mut c_void> for OfxImageClipHandle {
+    fn from(ptr: *mut c_void) -> Self {
+        Self(ptr as _)
+    }
+}
+
+impl Into<*mut c_void> for OfxImageEffectHandle {
+    fn into(self) -> *mut c_void {
+        self.0 as _
+    }
+}
+
+impl From<*mut c_void> for OfxImageEffectHandle {
+    fn from(ptr: *mut c_void) -> Self {
+        Self(ptr as _)
+    }
+}
+
+impl Into<*mut c_void> for OfxImageMemoryHandle {
+    fn into(self) -> *mut c_void {
+        self.0 as _
+    }
+}
+
+impl Into<*mut c_void> for OfxInteractHandle {
+    fn into(self) -> *mut c_void {
+        self.0 as _
+    }
+}
+
+impl From<*mut c_void> for OfxInteractHandle {
+    fn from(ptr: *mut c_void) -> Self {
+        Self(ptr as _)
+    }
+}
+
+impl From<*mut c_void> for OfxImageMemoryHandle {
+    fn from(ptr: *mut c_void) -> Self {
+        Self(ptr as _)
+    }
+}
+
+impl Into<*mut c_void> for OfxMutexHandle {
+    fn into(self) -> *mut c_void {
+        self.0 as _
+    }
+}
+
+impl From<*mut c_void> for OfxMutexHandle {
+    fn from(ptr: *mut c_void) -> Self {
+        Self(ptr as _)
+    }
+}
+
+impl Into<*mut c_void> for OfxParamHandle {
+    fn into(self) -> *mut c_void {
+        self.0 as _
+    }
+}
+
+impl From<*mut c_void> for OfxParamHandle {
+    fn from(ptr: *mut c_void) -> Self {
+        Self(ptr as _)
+    }
+}
+
+impl Into<*mut c_void> for OfxParamSetHandle {
+    fn into(self) -> *mut c_void {
+        self.0 as _
+    }
+}
+
+impl From<*mut c_void> for OfxParamSetHandle {
+    fn from(ptr: *mut c_void) -> Self {
+        Self(ptr as _)
+    }
+}
+impl Into<*mut c_void> for OfxPropertySetHandle {
+    fn into(self) -> *mut c_void {
+        self.0 as _
+    }
+}
+
+impl From<*mut c_void> for OfxPropertySetHandle {
+    fn from(ptr: *mut c_void) -> Self {
+        Self(ptr as _)
+    }
+}
+
 pub mod ofxstatus {
     use crate::OfxStatus;
     pub const OK: OfxStatus = OfxStatus(0);
