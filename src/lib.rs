@@ -6,9 +6,9 @@ use serde::{Deserialize, Serialize};
 
 include!("openfx_all.rs");
 
-impl Into<*mut c_void> for OfxDrawContextHandle {
-    fn into(self) -> *mut c_void {
-        self.0 as _
+impl From<OfxDrawContextHandle> for *mut c_void {
+    fn from(val: OfxDrawContextHandle) -> Self {
+        val.0 as _
     }
 }
 
@@ -18,9 +18,9 @@ impl From<*mut c_void> for OfxDrawContextHandle {
     }
 }
 
-impl Into<*mut c_void> for OfxImageClipHandle {
-    fn into(self) -> *mut c_void {
-        self.0 as _
+impl From<OfxImageClipHandle> for *mut c_void {
+    fn from(val: OfxImageClipHandle) -> Self {
+        val.0 as _
     }
 }
 
@@ -30,9 +30,9 @@ impl From<*mut c_void> for OfxImageClipHandle {
     }
 }
 
-impl Into<*mut c_void> for OfxImageEffectHandle {
-    fn into(self) -> *mut c_void {
-        self.0 as _
+impl From<OfxImageEffectHandle> for *mut c_void {
+    fn from(val: OfxImageEffectHandle) -> Self {
+        val.0 as _
     }
 }
 
@@ -42,15 +42,15 @@ impl From<*mut c_void> for OfxImageEffectHandle {
     }
 }
 
-impl Into<*mut c_void> for OfxImageMemoryHandle {
-    fn into(self) -> *mut c_void {
-        self.0 as _
+impl From<OfxImageMemoryHandle> for *mut c_void {
+    fn from(val: OfxImageMemoryHandle) -> Self {
+        val.0 as _
     }
 }
 
-impl Into<*mut c_void> for OfxInteractHandle {
-    fn into(self) -> *mut c_void {
-        self.0 as _
+impl From<OfxInteractHandle> for *mut c_void {
+    fn from(val: OfxInteractHandle) -> Self {
+        val.0 as _
     }
 }
 
@@ -66,9 +66,9 @@ impl From<*mut c_void> for OfxImageMemoryHandle {
     }
 }
 
-impl Into<*mut c_void> for OfxMutexHandle {
-    fn into(self) -> *mut c_void {
-        self.0 as _
+impl From<OfxMutexHandle> for *mut c_void {
+    fn from(val: OfxMutexHandle) -> Self {
+        val.0 as _
     }
 }
 
@@ -78,9 +78,9 @@ impl From<*mut c_void> for OfxMutexHandle {
     }
 }
 
-impl Into<*mut c_void> for OfxParamHandle {
-    fn into(self) -> *mut c_void {
-        self.0 as _
+impl From<OfxParamHandle> for *mut c_void {
+    fn from(val: OfxParamHandle) -> Self {
+        val.0 as _
     }
 }
 
@@ -90,9 +90,9 @@ impl From<*mut c_void> for OfxParamHandle {
     }
 }
 
-impl Into<*mut c_void> for OfxParamSetHandle {
-    fn into(self) -> *mut c_void {
-        self.0 as _
+impl From<OfxParamSetHandle> for *mut c_void {
+    fn from(val: OfxParamSetHandle) -> Self {
+        val.0 as _
     }
 }
 
@@ -101,9 +101,9 @@ impl From<*mut c_void> for OfxParamSetHandle {
         Self(ptr as _)
     }
 }
-impl Into<*mut c_void> for OfxPropertySetHandle {
-    fn into(self) -> *mut c_void {
-        self.0 as _
+impl From<OfxPropertySetHandle> for *mut c_void {
+    fn from(val: OfxPropertySetHandle) -> Self {
+        val.0 as _
     }
 }
 
