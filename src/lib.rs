@@ -137,10 +137,7 @@ pub mod ofxstatus {
 
 impl OfxStatus {
     pub fn failed(&self) -> bool {
-        match *self {
-            ofxstatus::OK | ofxstatus::ReplyDefault => false,
-            _ => true,
-        }
+        !matches!(*self, ofxstatus::OK | ofxstatus::ReplyDefault)
     }
 
     pub fn succeeded(&self) -> bool {
