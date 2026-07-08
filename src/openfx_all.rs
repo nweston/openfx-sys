@@ -742,7 +742,7 @@ pub struct OfxPropertySetHandle(pub *mut OfxPropertySetStruct);
 #[derive(Copy, Clone, PartialEq, Eq)]
 pub struct OfxStatus(pub ::std::os::raw::c_int);
 #[repr(C)]
-#[derive(Debug, Copy, Clone, PartialEq, Eq)]
+#[derive(Debug, Copy, Clone)]
 pub struct OfxHost {
     pub host: OfxPropertySetHandle,
     pub fetchSuite: ::std::option::Option<
@@ -775,7 +775,7 @@ fn bindgen_test_layout_OfxHost() {
     );
 }
 #[repr(transparent)]
-#[derive(Debug, Copy, Clone, PartialEq, Eq)]
+#[derive(Debug, Copy, Clone)]
 pub struct OfxPluginEntryPoint(
     pub  ::std::option::Option<
         unsafe extern "C" fn(
@@ -787,7 +787,7 @@ pub struct OfxPluginEntryPoint(
     >,
 );
 #[repr(C)]
-#[derive(Debug, Copy, Clone, PartialEq, Eq)]
+#[derive(Debug, Copy, Clone)]
 pub struct OfxPlugin {
     pub pluginApi: *const ::std::os::raw::c_char,
     pub apiVersion: ::std::os::raw::c_int,
@@ -1068,7 +1068,7 @@ fn bindgen_test_layout_OfxRectD() {
     );
 }
 #[repr(C)]
-#[derive(Debug, Copy, Clone, PartialEq, Eq)]
+#[derive(Debug, Copy, Clone)]
 pub struct OfxPropertySuiteV1 {
     pub propSetPointer: ::std::option::Option<
         unsafe extern "C" fn(
@@ -1365,7 +1365,7 @@ fn bindgen_test_layout_OfxBytes() {
     );
 }
 #[repr(transparent)]
-#[derive(Debug, Copy, Clone, PartialEq, Eq)]
+#[derive(Debug, Copy, Clone)]
 pub struct OfxCustomParamInterpFuncV1(
     pub  ::std::option::Option<
         unsafe extern "C" fn(
@@ -1376,7 +1376,7 @@ pub struct OfxCustomParamInterpFuncV1(
     >,
 );
 #[repr(C)]
-#[derive(Debug, Copy, Clone, PartialEq, Eq)]
+#[derive(Debug, Copy, Clone)]
 pub struct OfxParameterSuiteV1 {
     pub paramDefine: ::std::option::Option<
         unsafe extern "C" fn(
@@ -1584,7 +1584,7 @@ pub struct OfxInteract {
 #[derive(Debug, Copy, Clone, PartialEq, Eq)]
 pub struct OfxInteractHandle(pub *mut OfxInteract);
 #[repr(C)]
-#[derive(Debug, Copy, Clone, PartialEq, Eq)]
+#[derive(Debug, Copy, Clone)]
 pub struct OfxInteractSuiteV1 {
     pub interactSwapBuffers: ::std::option::Option<
         unsafe extern "C" fn(interactInstance: OfxInteractHandle) -> OfxStatus,
@@ -1630,7 +1630,7 @@ fn bindgen_test_layout_OfxInteractSuiteV1() {
     );
 }
 #[repr(C)]
-#[derive(Debug, Copy, Clone, PartialEq, Eq)]
+#[derive(Debug, Copy, Clone)]
 pub struct OfxMessageSuiteV1 {
     pub message: ::std::option::Option<
         unsafe extern "C" fn(
@@ -1663,7 +1663,7 @@ fn bindgen_test_layout_OfxMessageSuiteV1() {
     );
 }
 #[repr(C)]
-#[derive(Debug, Copy, Clone, PartialEq, Eq)]
+#[derive(Debug, Copy, Clone)]
 pub struct OfxMessageSuiteV2 {
     pub message: ::std::option::Option<
         unsafe extern "C" fn(
@@ -1718,7 +1718,7 @@ fn bindgen_test_layout_OfxMessageSuiteV2() {
     );
 }
 #[repr(C)]
-#[derive(Debug, Copy, Clone, PartialEq, Eq)]
+#[derive(Debug, Copy, Clone)]
 pub struct OfxMemorySuiteV1 {
     pub memoryAlloc: ::std::option::Option<
         unsafe extern "C" fn(
@@ -1765,7 +1765,7 @@ pub struct OfxMutex {
 #[derive(Debug, Copy, Clone, PartialEq, Eq)]
 pub struct OfxMutexHandle(pub *mut OfxMutex);
 #[repr(transparent)]
-#[derive(Debug, Copy, Clone, PartialEq, Eq)]
+#[derive(Debug, Copy, Clone)]
 pub struct OfxThreadFunctionV1(
     pub  ::std::option::Option<
         unsafe extern "C" fn(
@@ -1776,7 +1776,7 @@ pub struct OfxThreadFunctionV1(
     >,
 );
 #[repr(C)]
-#[derive(Debug, Copy, Clone, PartialEq, Eq)]
+#[derive(Debug, Copy, Clone)]
 pub struct OfxMultiThreadSuiteV1 {
     pub multiThread: ::std::option::Option<
         unsafe extern "C" fn(
@@ -1893,7 +1893,7 @@ pub struct OfxImageMemoryStruct {
 #[derive(Debug, Copy, Clone, PartialEq, Eq)]
 pub struct OfxImageMemoryHandle(pub *mut OfxImageMemoryStruct);
 #[repr(C)]
-#[derive(Debug, Copy, Clone, PartialEq, Eq)]
+#[derive(Debug, Copy, Clone)]
 pub struct OfxImageEffectSuiteV1 {
     pub getPropertySet: ::std::option::Option<
         unsafe extern "C" fn(
@@ -2050,7 +2050,7 @@ fn bindgen_test_layout_OfxImageEffectSuiteV1() {
     );
 }
 #[repr(C)]
-#[derive(Debug, Copy, Clone, PartialEq, Eq)]
+#[derive(Debug, Copy, Clone)]
 pub struct OfxImageEffectOpenGLRenderSuiteV1 {
     pub clipLoadTexture: ::std::option::Option<
         unsafe extern "C" fn(
@@ -2098,7 +2098,7 @@ fn bindgen_test_layout_OfxImageEffectOpenGLRenderSuiteV1() {
     );
 }
 #[repr(C)]
-#[derive(Debug, Copy, Clone, PartialEq, Eq)]
+#[derive(Debug, Copy, Clone)]
 pub struct OfxOpenCLProgramSuiteV1 {
     pub compileProgram: ::std::option::Option<
         unsafe extern "C" fn(
@@ -2130,7 +2130,7 @@ fn bindgen_test_layout_OfxOpenCLProgramSuiteV1() {
     );
 }
 #[repr(C)]
-#[derive(Debug, Copy, Clone, PartialEq, Eq)]
+#[derive(Debug, Copy, Clone)]
 pub struct OfxProgressSuiteV1 {
     pub progressStart: ::std::option::Option<
         unsafe extern "C" fn(
@@ -2179,7 +2179,7 @@ fn bindgen_test_layout_OfxProgressSuiteV1() {
     );
 }
 #[repr(C)]
-#[derive(Debug, Copy, Clone, PartialEq, Eq)]
+#[derive(Debug, Copy, Clone)]
 pub struct OfxProgressSuiteV2 {
     pub progressStart: ::std::option::Option<
         unsafe extern "C" fn(
@@ -2229,7 +2229,7 @@ fn bindgen_test_layout_OfxProgressSuiteV2() {
     );
 }
 #[repr(C)]
-#[derive(Debug, Copy, Clone, PartialEq, Eq)]
+#[derive(Debug, Copy, Clone)]
 pub struct OfxTimeLineSuiteV1 {
     pub getTime: ::std::option::Option<
         unsafe extern "C" fn(instance: *mut ::std::os::raw::c_void, time: *mut f64) -> OfxStatus,
@@ -2276,7 +2276,7 @@ fn bindgen_test_layout_OfxTimeLineSuiteV1() {
     );
 }
 #[repr(C)]
-#[derive(Debug, Copy, Clone, PartialEq, Eq)]
+#[derive(Debug, Copy, Clone)]
 pub struct OfxParametricParameterSuiteV1 {
     pub parametricParamGetValue: ::std::option::Option<
         unsafe extern "C" fn(
@@ -2402,7 +2402,7 @@ fn bindgen_test_layout_OfxParametricParameterSuiteV1() {
     );
 }
 #[repr(C)]
-#[derive(Debug, Copy, Clone, PartialEq, Eq)]
+#[derive(Debug, Copy, Clone)]
 pub struct OfxDialogSuiteV1 {
     pub RequestDialog: ::std::option::Option<
         unsafe extern "C" fn(user_data: *mut ::std::os::raw::c_void) -> OfxStatus,
@@ -2794,7 +2794,7 @@ pub const OfxDrawTextAlignment_kOfxDrawTextAlignmentCenterH: OfxDrawTextAlignmen
 pub const OfxDrawTextAlignment_kOfxDrawTextAlignmentCenterV: OfxDrawTextAlignment = 20;
 pub type OfxDrawTextAlignment = ::std::os::raw::c_uint;
 #[repr(C)]
-#[derive(Debug, Copy, Clone, PartialEq, Eq)]
+#[derive(Debug, Copy, Clone)]
 pub struct OfxDrawSuiteV1 {
     pub getColour: ::std::option::Option<
         unsafe extern "C" fn(
